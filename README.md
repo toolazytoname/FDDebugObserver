@@ -22,7 +22,7 @@ Add code as follows,the logBlock will output log when observed keyPath changes.
      }];
 ~~~
 
-If you run the demo,the output is
+The output of running the demo:
 
 ~~~
 2016-08-05 18:13:10.423 FDDebugObserverDemo[332:66339] log:[FDDebugObserver] Who Moved <UIApplication: 0x12ee0b0f0>'s idleTimerDisabled ? callStackSymbols:(
@@ -71,4 +71,15 @@ This method aims to log the dictionary inside for the convenience of debugging.
     [[FDDebugObserver fd_sharedDebugObserver] fd_logCurrentobserverDictionary];
 ~~~
 
+The output of running the demo:
+
+~~~
+2016-08-05 19:24:14.587 FDDebugObserverDemo[332:66339] [FDDebugObserver] observedDictionary:{
+    "observedKeyPath:idleTimerDisabledobservedObject:0x12ee0b0f0" = "<UIApplication: 0x12ee0b0f0>";
+};
+logBlockDictionary:{
+    "observedKeyPath:idleTimerDisabledobservedObject:0x12ee0b0f0" = "<__NSGlobalBlock__: 0x1001040d0>";
+}
+
+~~~
 
