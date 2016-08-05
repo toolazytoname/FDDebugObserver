@@ -25,7 +25,11 @@
 }
 
 - (IBAction)add:(id)sender {
-    [[FDDebugObserver fd_sharedDebugObserver] fd_addObservedObject:[UIApplication sharedApplication] observedKeyPath:@"idleTimerDisabled"];
+    [[FDDebugObserver fd_sharedDebugObserver] fd_addObservedObject:[UIApplication sharedApplication]
+     observedKeyPath:@"idleTimerDisabled"
+     logBlock:^(NSString *log) {
+         NSLog(@"log:%@",log);
+     }];
 }
 
 - (IBAction)remove:(id)sender {

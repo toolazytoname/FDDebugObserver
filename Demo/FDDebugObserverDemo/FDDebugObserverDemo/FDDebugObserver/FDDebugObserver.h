@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef void(^FDLogBlock)(NSString *log);
+
 /**
  * Who Moved My Cheese?
  *
  * An Amazing tool to observer the KeyPath of a Object.The tool will print the callStackSymbols when the observed keyPath changes.
+ *
+ * Multiply KeyPaths and objects is supported.
  */
 @interface FDDebugObserver : NSObject
 
@@ -26,8 +31,11 @@
  *
  *  @param observedObject  object to observer
  *  @param observedKeyPath keyPath of the object to server
+ *  @param logBlock        log output block
  */
-- (void)fd_addObservedObject:(NSObject *)observedObject observedKeyPath:(NSString *)observedKeyPath;
+- (void)fd_addObservedObject:(NSObject *)observedObject
+             observedKeyPath:(NSString *)observedKeyPath
+                    logBlock:(FDLogBlock)logBlock;
 
 /**
  *  remove observedObject and observedKeyPath
