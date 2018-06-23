@@ -1,6 +1,6 @@
 # FDDebugObserver
 
-##Who Moved My Cheese?
+## Who Moved My Cheese?
 
 An Amazing tool to observe the KeyPath of an Object.
 
@@ -8,11 +8,11 @@ The tool will print the callStackSymbols when the observed keyPath changes.
 
 Multiple KeyPaths and objects are supported.
 
-##How to use?
+##  How to use?
 
 Add code as follows,the logBlock will output log when observed keyPath changes.
 
-###add
+### add
 
 ~~~
 [[FDDebugObserver fd_sharedDebugObserver] fd_addObservedObject:[UIApplication sharedApplication]
@@ -53,8 +53,7 @@ The output of running the demo:
 
 ~~~
 
-
-###remove
+### remove
 
 You can remove it when you do not want to observer anymore.
 
@@ -63,7 +62,7 @@ You can remove it when you do not want to observer anymore.
 
 ~~~
 
-###log
+### log
 
 This method aims to log the dictionary inside for the convenience of debugging.
 
@@ -83,3 +82,43 @@ logBlockDictionary:{
 
 ~~~
 
+
+
+## Installation
+
+FDCache is available through [CocoaPods](https://cocoapods.org). To install
+
+it, simply add the following line to your Podfile:
+
+
+
+``` ruby
+source 'https://github.com/CocoaPods/Specs.git'  # 官方库
+
+source 'https://github.com/toolazytoname/Specs.git'#懒得起名私有库
+
+platform :ios, '8.0'
+
+target "TargetName" do
+
+pod 'FDDebugObserver'
+
+end
+
+```
+
+
+
+
+
+##  Author
+
+
+
+toolazytoname, lazywc@gmail.com
+
+##  License
+
+
+
+FDCache is available under the MIT license. See the LICENSE file for more info.
